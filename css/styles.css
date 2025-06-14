@@ -95,6 +95,7 @@ textarea,
 span,
 input,
 .entry-text {
+  font-size: 16px;
   line-height: 150%;
   font-family: var(--plus-jakarta-sans);
   font-style: var(--font-style-regular);
