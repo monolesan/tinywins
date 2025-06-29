@@ -89,7 +89,7 @@ h3,
   font-style: var(--font-style-regular);
   font-weight: var(--font-weight-regular);
 }
-/*change text size here*/
+
 p,
 textarea,
 span,
@@ -993,6 +993,10 @@ gap: var(--margin-24);
   flex: 4;
 }
 
+.column-header {
+  flex-direction: row;
+}
+
 .button-container-landing {
   display: flex;
   justify-content: center;
@@ -1259,13 +1263,14 @@ gap: var(--margin-24);
     flex-direction: column-reverse;
     width: max-content;
     align-self: self-end;
+    padding: 0px var(--margin-8);
   }
 
   #settings-container {
     width: 100%;
     flex-direction: column-reverse;
     /* align-items: flex-end; */
-    padding: var(--margin-16) 0;
+    padding: var(--margin-16) var(--margin-8);
   }
 
   .settings-container_of-container {
@@ -1345,9 +1350,33 @@ gap: var(--margin-24);
     width: 24px;
 }
 
+.header {
+  align-items: start;
+  gap: var(--margin-16);
+}
+
+textarea {
+  width: 100%;
+  min-height: 46vh;
+}
+
+.column-header {
+  flex-direction: column;
+}
+
 }
 
 
 .full_width {
   width: 100%;
+}
+
+#reflect-btn {
+  align-items: center;
+  gap: 8px;
+}
+
+#reflect-btn:hover path {
+  /* fill: white; */
+  stroke: white;
 }
