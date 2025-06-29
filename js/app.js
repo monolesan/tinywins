@@ -745,7 +745,7 @@ isSettingOpen = false;
     const entries = JSON.parse(localStorage.getItem(STORAGE_KEYS.ENTRIES) || '[]');
     
     // Toggle reflect button visibility based on entries
-    reflectBtn.style.display = entries.length > 0 ? 'block' : 'none';
+    reflectBtn.style.display = entries.length > 0 ? 'flex' : 'none';
     
     if (entries.length === 0) {
       entriesList.innerHTML = '<p>No entries yet. Start journaling today!</p>';
@@ -942,11 +942,13 @@ isSettingOpen = false;
     // soundName();
     audio.play();
     showIconSoundOn();
+    document.getElementById('current-sound-word').innerHTML = 'is playing';
   }
 
   function pauseTrack() {
     audio.pause();
     showIconSoundOff();
+    document.getElementById('current-sound-word').innerHTML = 'play';
   }
 
   function nextTrack() {
